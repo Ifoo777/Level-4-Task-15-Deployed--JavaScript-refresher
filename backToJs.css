@@ -1,0 +1,82 @@
+/*Set the body styling*/
+body {
+    background-color: red;
+    color: yellow;
+    font-weight: bolder;
+    width: 80%;
+    margin: auto;
+  }
+  /*header and footer set background and text color*/
+  header {
+    background-color: gray;
+    padding: 10px;
+  }
+  footer {
+    background-color: gray;
+    color: black;
+  }
+  /*Set header button width relative to page equally spaced*/
+  .header-button {
+    width: 33%;
+  }
+  
+  /*Set colors and sizing of body and body elements*/
+  button {
+    color: lime;
+    background-color: black;
+    cursor: pointer;
+  }
+  
+  h1 {
+    color: black;
+    background-color: blueviolet;
+  }
+  
+  h2 {
+    color: green;
+    font-size: 3rem;
+  }
+  
+  iframe {
+    border-radius: 10px;
+    background-color: rgb(48, 48, 48);
+    width: 100%;
+    height: 200;
+    border: 1px solid black;
+  }
+  
+  /*Style the table and sizing*/
+  table,
+  th,
+  td {
+    border: 1px solid;
+  }
+  table {
+    width: 100%;
+    border-radius: 10px;
+    background-color: black;
+  }
+  td.example {
+    width: 50%;
+  }
+  
+  /*Style element classes*/
+  .home-h3 {
+    color: lime;
+    background-color: black;
+  }
+  
+  .example {
+    color: lime;
+  }
+  
+  .footnote {
+    color: orange;
+  }
+  
+  .functionButton{
+    width: 100%;
+    color: yellow;
+    border: 2px solid lime;
+    border-radius: 10px;
+  }

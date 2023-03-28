@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--jQuery library imported-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--CSS linked-->
+    <link rel="stylesheet" href="backToJS.css" />
+    <!--JavaScript file linked-->
+    <script type="text/javascript" src="backToJS.js"></script>
+    <!--Title of page-->
+    <title>JS Basics</title>
+  </head>
+  <body>
+    <!--Header of page with links to other pages with buttons-->
+    <header>
+      <span
+        ><a href="index.html"
+          ><button class="header-button">Home</button></a
+        ></span
+      >
+      <span
+        ><a href="basic.html"
+          ><button class="header-button">Basic JS Syntax</button></a
+        ></span
+      >
+      <span
+        ><a href="events.html"
+          ><button class="header-button">Events & JQuery</button></a
+        ></span
+      >
+    </header>
+
+    <h1>
+      <u>BASIC JAVA SCRIPT SYNTAX</u>
+    </h1>
+
+    <!--Explain what is Variables-->
+    <h2>
+      <u>Variables</u>
+    </h2>
+
+    <table>
+      <th>Example</th>
+      <th>Note</th>
+
+      <tr>
+        <td class="example">const greeting = "Hello";</td>
+        <td class="footnote">
+          'const' means the variable cannot be reassigned
+        </td>
+      </tr>
+      <tr>
+        <td class="example">let question = "How are you?";</td>
+        <td class="footnote">'let' means the variable can be reassigned</td>
+      </tr>
+    </table>
+
+    <!--Explain Conditional statements-->
+    <h2>
+      <u>Conditional Statements</u>
+    </h2>
+    <table>
+      <tr>
+        <td class="example">
+          if (greeting === "Hello" && question === "What's the time?") {<br />
+          console.log("It is 10 'o'clock.");<br />
+          }<br />
+          else if ((greeting === "Hello") || (question === "What is the weather
+          like tomorrow?")) {<br />
+          console.log("It will be sunny tomorrow.");<br />
+          }<br />
+          else {<br />
+          console.log("I don't understand the question.");<br />
+          }<br />
+        </td>
+      </tr>
+    </table>
+    <br />
+
+    <!--Ask the user to try it themselves-->
+    <p>
+      <u
+        >Try some basic - IF - functions yourself. Copy and past this
+        example:</u
+      >
+      <br />
+      <br />
+      const greeting = "Hello"; let question = "How are you?"; if ((greeting ===
+      "Hello") || (question === "What is the weather like tomorrow?")) {
+      console.log("It will be sunny tomorrow.");}
+    </p>
+
+    <!--Display a terminal in frame-->
+    <iframe src="console.html"> </iframe>
+
+    <!--Explain Arrays and Loops-->
+    <h2>
+      <u>Arrays and Loops</u>
+    </h2>
+    <table>
+      <th>Example</th>
+      <th>Note</th>
+      <tr>
+        <td class="example">
+          let classMarks = [62,88,90,70,69,85];<br /><br />
+          for (i=classMarks.length-1; i >= 0; i--) {<br />
+          console.log(classMarks[i]);<br />
+          }
+        </td>
+        <td class="footnote">// outputs each element reversed</td>
+      </tr>
+      <tr>
+        <td class="example">
+          for (let number of classMarks) {<br />
+          console.log(number);<br />
+          }
+        </td>
+        <td class="footnote">// outputs each element</td>
+      </tr>
+      <tr>
+        <td class="example">
+          classMarks.forEach(function(number) {<br />
+          console.log(number+2);<br />
+          });
+        </td>
+        <td class="footnote">// adds 2 to each number and outputs it</td>
+      </tr>
+      <tr>
+        <td class="example">
+          let counter = 0;<br />
+          let j = 0;<br />
+          while (counter <= 4) {<br />
+          console.log(classMarks[j]);<br />
+          counter ++;<br />
+          j++<br />
+          }
+        </td>
+        <td class="footnote">// outputs the first 5 elements in the array</td>
+      </tr>
+    </table>
+
+    <h3>Some Array Methods</h3>
+    <table>
+      <th>Example</th>
+      <th>Action</th>
+
+      <tr>
+        <td class="example">indexOf()</td>
+        <td class="footnote">
+          Searches the array for the given element and returns its position
+        </td>
+      </tr>
+      <tr>
+        <td class="example">includes()</td>
+        <td class="footnote">Checks if the array contains a given element</td>
+      </tr>
+      <tr>
+        <td class="example">remove()</td>
+        <td class="footnote">Removes an item from the list</td>
+      </tr>
+      <tr>
+        <td class="example">pop()</td>
+        <td class="footnote">Removes the last element in the array</td>
+      </tr>
+      <tr>
+        <td class="example">push()</td>
+        <td class="footnote">
+          Adds an element to the end of the array and returns the new length
+        </td>
+      </tr>
+      <tr>
+        <td class="example">shift()</td>
+        <td class="footnote">Removes the first element in the array</td>
+      </tr>
+      <tr>
+        <td class="example">sort()</td>
+        <td class="footnote">Sorts elements in the array in ascending order</td>
+      </tr>
+      <tr>
+        <td class="example">splice()</td>
+        <td class="footnote">Adds or removes elements in an array</td>
+      </tr>
+      <tr>
+        <td class="example">reverse()</td>
+        <td class="footnote">Reverses the order of elements in the array</td>
+      </tr>
+    </table>
+    <br />
+
+    <!--Ask the user to try it themselves-->
+    <p>
+      <u>Try Methods yourself. Copy and past this example:</u> <br />
+      <br />
+      let numbers = [1,2,5,4,3]; let sortedNumbers = numbers.sort();
+      console.log(sortedNumbers);
+    </p>
+    <!--Display a terminal in frame-->
+    <iframe src="console.html"> </iframe>
+
+    <!--Explain Maps-->
+    <h2>
+      <u>Maps</u>
+    </h2>
+
+    <table>
+      <th>Example</th>
+      <th>Note</th>
+
+      <tr>
+        <td class="example">
+          let teachers = new Map();<br />
+          teachers.set("grade 1", "Mrs Johnson");<br />
+          teachers.set("grade 2", "Mr Bennett");<br />
+          for (let [key, value] of teachers) {<br />
+          console.log(key + ' = ' + value);<br />
+          }
+        </td>
+        <td class="footnote">
+          // grade 1 = Mrs Johnson<br />
+          // grade 2 = Mr Bennett<br />
+        </td>
+      </tr>
+      <tr>
+        <td class="example">
+          for (let key of teachers.keys()) {<br />
+          console.log(key);<br />
+          }
+        </td>
+        <td class="footnote">
+          // grade 1<br />
+          // grade 2
+        </td>
+      </tr>
+      <tr>
+        <td class="example">
+          for (let value of teachers.values()) {<br />
+          console.log(value);<br />
+          }
+        </td>
+        <td class="footnote">
+          // Mrs Johnson<br />
+          // Mr Bennett
+        </td>
+      </tr>
+      <tr>
+        <td class="example">
+          for (let [key, value] of teachers.entries()) {<br />
+          console.log(`The ${key} teacher is ${value}.`);<br />
+          }
+        </td>
+        <td class="footnote">
+          // The grade 1 teacher is Mrs Johnson<br />
+          // The grade 2 teacher is Mr Bennett
+        </td>
+      </tr>
+    </table>
+
+    <h3>Some Map Methods</h3>
+    <table>
+      <th>Example</th>
+      <th>Action</th>
+
+      <tr>
+        <td class="example">has()</td>
+        <td class="footnote">
+          checks to see if a key exists in the map and returns a boolean
+        </td>
+      </tr>
+      <tr>
+        <td class="example">get()</td>
+        <td class="footnote">returns the value of the given key</td>
+      </tr>
+      <tr>
+        <td class="example">delete()</td>
+        <td class="footnote">deletes the given key-value pair from the map</td>
+      </tr>
+      <tr>
+        <td class="example">clear()</td>
+        <td class="footnote">removes all key-value pairs in a map</td>
+      </tr>
+    </table>
+
+    <!--Explain Functions-->
+    <h2>
+      <u>Functions</u>
+    </h2>
+
+    <h3>User-defined functions:</h3>
+    <table>
+      <th>Example</th>
+      <th>Note</th>
+
+      <tr>
+        <td class="example">
+          function doubleNumber(number) {<br />
+          return number * 2;<br />
+          }<br />
+          console.log(doubleNumber(10));
+        </td>
+        <td class="footnote">// outputs 20</td>
+      </tr>
+    </table>
+
+    <h3>Some Built-in functions</h3>
+    <table>
+      <th>Example</th>
+      <th>Action</th>
+
+      <tr>
+        <td class="example">charAt()</td>
+        <td class="footnote">
+          returns a character in a string at the given index
+        </td>
+      </tr>
+      <tr>
+        <td class="example">indexOf()</td>
+        <td class="footnote">
+          returns the index of a the first occurrence of a character in a string
+        </td>
+      </tr>
+      <tr>
+        <td class="example">charCodeAt()</td>
+        <td class="footnote">
+          returns the ascii number of the character at the given index in a
+          string
+        </td>
+      </tr>
+      <tr>
+        <td class="example">fromCharCode()</td>
+        <td class="footnote">
+          returns the character of the given ascii number
+        </td>
+      </tr>
+      <tr>
+        <td class="example">replace()</td>
+        <td class="footnote">
+          replaces a matched substring with a new substring
+        </td>
+      </tr>
+      <tr>
+        <td class="example">split()</td>
+        <td class="footnote">splits a string into an array of substrings</td>
+      </tr>
+      <tr>
+        <td class="example">toUpperCase()</td>
+        <td class="footnote">returns the given string all in upper case</td>
+      </tr>
+      <tr>
+        <td class="example">toLowerCase()</td>
+        <td class="footnote">returns the given string in all lower case</td>
+      </tr>
+      <tr>
+        <td class="example">join()</td>
+        <td class="footnote">
+          opposite of split(). Joins all array elements into a string
+        </td>
+      </tr>
+      <tr>
+        <td class="example">pow()</td>
+        <td class="footnote">returns a base to the exponent power</td>
+      </tr>
+      <tr>
+        <td class="example">min()</td>
+        <td class="footnote">returns the smallest valued element</td>
+      </tr>
+      <tr>
+        <td class="example">max()</td>
+        <td class="footnote">returns the largest value element</td>
+      </tr>
+      <tr>
+        <td class="example">round()</td>
+        <td class="footnote">
+          returns a number rounded to the nearest integer
+        </td>
+      </tr>
+    </table>
+
+    <!--Ask the user to try it themselves-->
+    <p>
+      <u>Try it yourself. Copy and past this example:</u> <br />
+      <br />
+      let lowestNumber = Math.min(50,150, 30, 23, 38);
+      console.log(lowestNumber);
+    </p>
+    <!--Display a terminal in frame-->
+    <iframe src="console.html"> </iframe>
+    <br />
+
+    <!--Footer of page to say when it was created and the project type-->
+    <footer>
+      <p>
+        Updated 2022 - This content was created as part of a student project at
+        HyperionDev - Content part of study module
+      </p>
+    </footer>
+  </body>
+</html>

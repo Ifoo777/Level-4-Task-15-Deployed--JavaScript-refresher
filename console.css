@@ -1,0 +1,56 @@
+/*Leave no margin, best for in frame displaying*/
+body{
+    margin: 0;
+}
+
+/*Change the font family to look more like JS*/
+.console * {
+    font-family: monospace;
+}
+
+/*Display full width/column*/
+.console{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+/*Outer div where the 2 divs history input and output is created inside*/
+.console-history{
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 24px;
+    background-color: rgb(48, 48, 48);
+}
+
+.console-input-log,
+.console-output-log{
+    box-sizing: border-box;
+    padding: 6px 12px;
+}
+
+/*When hover over previous inputs, change background color*/
+.console-input-log:hover,
+.console-output-log:hover{
+   background: black;
+}
+
+/*Dsiplay colors of the input log and the output logs history*/
+.console-input-log{
+    color: white;
+    font-weight: bold;
+}
+.console-output-log{
+    color: lime;
+    font-weight: bold;
+}
+
+/*Formal the styles of the input box where the formula is typed*/
+.console-input{
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid lime;
+    color: white;
+    background: black;
+}

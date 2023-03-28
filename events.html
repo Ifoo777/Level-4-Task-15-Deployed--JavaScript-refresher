@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--jQuery library imported-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--CSS linked-->
+    <link rel="stylesheet" href="backToJS.css" />
+    <!--JavaScript file linked-->
+    <script type="text/javascript" src="backToJS.js"></script>
+    <!--Title of page-->
+    <title>Events</title>
+  </head>
+  <body>
+    <!--Header of page with links to other pages with buttons-->
+    <header>
+      <span
+        ><a href="index.html"
+          ><button class="header-button">Home</button></a
+        ></span
+      >
+      <span
+        ><a href="basic.html"
+          ><button class="header-button">Basic JS Syntax</button></a
+        ></span
+      >
+      <span
+        ><a href="events.html"
+          ><button class="header-button">Events & JQuery</button></a
+        ></span
+      >
+    </header>
+
+    <h1>
+      <u>EVENTS & JQUERY</u>
+    </h1>
+
+    <p style="font-size: 1.5rem">
+      We use Events and JQuery together to add more functionality to a website.
+    </p>
+
+    <!--Explain what is Events are-->
+    <h2>
+      <u>Events</u>
+    </h2>
+    <p>Some common events in DOM manipulation include:</p>
+
+    <table>
+      <th>Example</th>
+      <th>Note</th>
+
+      <tr>
+        <td class="example">onchange</td>
+        <td class="footnote">Some HTML element has been modified</td>
+      </tr>
+      <tr>
+        <td class="example">onclick</td>
+        <td class="footnote">An HTML element has been clicked on</td>
+      </tr>
+      <tr>
+        <td class="example">onmouseover</td>
+        <td class="footnote">An HTML element was hovered over</td>
+      </tr>
+      <tr>
+        <td class="example">onmouseout</td>
+        <td class="footnote">Mouse cursor moves off HTML element</td>
+      </tr>
+      <tr>
+        <td class="example">onkeydown</td>
+        <td class="footnote">A keyboard button is pressed</td>
+      </tr>
+      <tr>
+        <td class="example">onload</td>
+        <td class="footnote">The HTML page has finished loading</td>
+      </tr>
+
+      <th colspan="2">These can be built into functions</th>
+      <tr>
+        <td colspan="2" class="example">
+          function closeDoc(){<br />
+          alert("You are closing this page!");<br />
+          window.close();<br />
+          }
+        </td>
+      </tr>
+    </table>
+
+    <!--Explain what is JQuery is -->
+    <h2>
+      <u>JQUERY</u>
+    </h2>
+    <h3>Functions:</h3>
+
+    <table>
+      <th colspan="2">Functions:</th>
+      <tr>
+        <td class="example" colspan="2">
+          $(function(){<br />
+          <mark>// JQuery events and effects go here</mark><br />
+          );
+        </td>
+      </tr>
+
+      <th colspan="2">Selectors:</th>
+      <tr>
+        <td class="example">$("h1")</td>
+        <td class="footnote">// element selector</td>
+      </tr>
+      <tr>
+        <td class="example">$("#mainHeading")</td>
+        <td class="footnote">// ID selector</td>
+      </tr>
+      <tr>
+        <td class="example">$(".yellow")</td>
+        <td class="footnote">// class selector</td>
+      </tr>
+      <tr>
+        <td class="example">$("*")</td>
+        <td class="footnote">// selects all HTML elements</td>
+      </tr>
+      <tr>
+        <td class="example">$(this)</td>
+        <td class="footnote">// selects current HTML element</td>
+      </tr>
+      <tr>
+        <td class="example">$("button")</td>
+        <td class="footnote">// selects button element</td>
+      </tr>
+      <tr>
+        <td class="example">$("[href]")</td>
+        <td class="footnote">// selects all link-based elements</td>
+      </tr>
+
+      <th colspan="2">Creating and appending elements:</th>
+
+      <tr>
+        <td class="example">
+          let newParagraph = $(" &lt;p&gt; &lt;/p&gt; ").text("This is a new
+          paragraph.");
+        </td>
+        <td class="footnote">// creates a new paragraph</td>
+      </tr>
+      <tr>
+        <td class="example">$("body").append(newParagraph);</td>
+        <td class="footnote">
+          appends newParagraph to the end of the body element
+        </td>
+      </tr>
+    </table>
+
+    <h3>Some Common built-in functions in jQuery:</h3>
+    <table>
+      <th>Example</th>
+      <th>Action</th>
+
+      <tr>
+        <td class="example">after()</td>
+        <td class="footnote">
+          Inserts content after the selected HTML element
+        </td>
+      </tr>
+      <tr>
+        <td class="example">prepend()</td>
+        <td class="footnote">
+          Inserts content at the beginning of the selected element
+        </td>
+      </tr>
+      <tr>
+        <td class="example">append()</td>
+        <td class="footnote">
+          Inserts content at the end of the selected element
+        </td>
+      </tr>
+      <tr>
+        <td class="example">before()</td>
+        <td class="footnote">
+          Inserts content after the selected HTML element
+        </td>
+      </tr>
+      <tr>
+        <td class="example">empty()</td>
+        <td class="footnote">
+          Removes the child elements from the selected element, but not the
+          element itself
+        </td>
+      </tr>
+      <tr>
+        <td class="example">text()</td>
+        <td class="footnote">
+          sets or returns the text content of the selected element
+        </td>
+      </tr>
+      <tr>
+        <td class="example">val()</td>
+        <td class="footnote">Sets or returns the value of a form field</td>
+      </tr>
+      <tr>
+        <td class="example">remove()</td>
+        <td class="footnote">
+          Removes the selected element, including its child elements
+        </td>
+      </tr>
+    </table>
+
+    <!--Give example of header of HTML page -->
+    <h3>Separate Scripting Files on HTML header:</h3>
+    <table>
+      <th>Example</th>
+      <th>Action</th>
+      <tr>
+        <td class="example">
+          &lt;head&gt; <br />
+          &lt;script
+          src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;
+          <br />
+          &lt;/script&gt; <br />
+          &lt;script src="script.js"&gt; &lt;/script&gt; <br />
+          &lt;/head&gt;
+        </td>
+        <td class="footnote">
+          &lt;!-- Used to create a scripting file incorporating jQuery --&gt;
+        </td>
+      </tr>
+    </table>
+
+    <h3>Events and effects:</h3>
+    <table>
+      <tr>
+        <td class="example">
+          $("p").click(function(){ <br />
+          $("this").hide('slow'); <br />
+          });
+        </td>
+      </tr>
+    </table>
+
+    <!--Common events examples-->
+    <h3>Common events in jQuery:</h3>
+
+    <table>
+      <ol>
+        <tr>
+          <td class="example"><li>Mouse events:</li></td>
+          <td class="footnote">
+            <ul>
+              <li>Click</li>
+              <li>Double click</li>
+              <li>Mouse enter</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="example"><li>Keyboard events:</li></td>
+          <td class="footnote">
+            <ul>
+              <li>Key press</li>
+              <li>Key down</li>
+              <li>Key up</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="example"><li>Form events</li></td>
+          <td class="footnote">
+            <ul>
+              <li>Submit</li>
+              <li>Change</li>
+              <li>Blur</li>
+            </ul>
+          </td>
+        </tr>
+      </ol>
+    </table>
+
+    <h3>Effect chaining:</h3>
+    <table>
+      <th>Example</th>
+      <th>Action</th>
+      <tr>
+        <td class="example">
+          $("button").css("color", "blue").slideDown(500).slideUp(500);
+        </td>
+        <td class="footnote">// example of effect chaining</td>
+      </tr>
+    </table>
+
+    <!--Common effects examples-->
+    <h3>Common effects in jQuery:</h3>
+
+    <table>
+      <th>Common Effects - Use as Example</th>
+      <th>Code</th>
+      <tr>
+        <td class="example">
+          <ul class="ul-main">
+            <li>Hide</li>
+            <ul class="ul-sub">
+              <li>Hides the selected element</li>
+            </ul>
+            <li>Show</li>
+            <ul class="ul-sub">
+              <li>Reveals the selected element</li>
+            </ul>
+
+            <li>Fade</li>
+            <ul class="ul-sub">
+              <li>Fades the element in or out</li>
+            </ul>
+
+            <li>Slide</li>
+            <ul class="ul-sub">
+              <li>Slides the element</li>
+            </ul>
+
+            <li>Animate</li>
+            <ul class="ul-sub">
+              <li>Animates some property of the element</li>
+            </ul>
+
+            <li>Stop</li>
+            <ul class="ul-sub">
+              <li>Stops any effect of an element</li>
+            </ul>
+          </ul>
+        </td>
+
+        <!--Give a code example amd let the user experience it first had-->
+        <td class="footnote">
+          $(".ul-sub").on('mouseover', function () { <br />
+          $(this).fadeOut(1000);<br />
+          });<br />
+          <br />
+          <button id="subLiButton" class="functionButton">
+            Fade out List Items<br />
+            -Activate Above Code-
+          </button>
+        </td>
+      </tr>
+    </table>
+    <br />
+
+    <!--More examples and let the user activate them with buttons-->
+    <h3>More Examples:</h3>
+    <table>
+      <tr>
+        <td class="example">
+          <br />
+
+          $('#background').on('click', function () {<br /><br />
+          slideChanger = setInterval(animateBoxes, 2000);<br />
+          changeColor = setInterval(changecolors, 1000);<br /><br />
+
+          function animateBoxes() {<br />
+          $(".bodyMove").animate({<br />
+          'margin-left': '-500px'<br />
+          }, 1000).animate({<br />
+          'margin-left': '500px'<br />
+          }, 1000);<br />
+          }<br />
+          animateBoxes();<br /><br />
+
+          let counterColors = 0;<br />
+          function changecolors() {<br />
+          let colors = ["blue", "red", "green", "purple", "black"];<br />
+          if (counterColors &lt; colors.length) {<br />
+          $("body").css("background-color", colors[counterColors], 1000);<br />
+          counterColors++;<br />
+          } else {<br />
+          counterColors = 0;<br />
+          }<br />
+          }<br />
+          changecolors();<br />
+          });
+          <br /><br />
+        </td>
+        <td class="footnote">
+          <button id="background" class="functionButton">
+            CHANGE THE BACKGROUND - Click Here
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="example">
+          <br />
+          $('#stopColorChange').on('click', function () {<br />
+          clearInterval(changeColor);<br />
+          }); <br /><br />
+        </td>
+        <td class="footnote">
+          <button id="stopColorChange" class="functionButton">
+            STOP BACKGROUND CHANGE - Click Here
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <!--Footer of page to say when it was created and the project type-->
+    <footer>
+      <p>
+        Updated 2022 - This content was created as part of a student project at
+        HyperionDev - Content part of study module
+      </p>
+    </footer>
+  </body>
+</html>
